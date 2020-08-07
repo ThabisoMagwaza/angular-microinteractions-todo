@@ -1,0 +1,10 @@
+<ul *ngIf="toDoList" @fadeList class="to-do-list">
+  <li
+    @fadeItem
+    *ngFor="let item of toDoList"
+    class="to-do-list__item"
+    (click)="removeItem(item)"
+  >
+    {{ item }}
+  </li>
+</ul>

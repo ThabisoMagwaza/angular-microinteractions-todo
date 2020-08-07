@@ -1,0 +1,30 @@
+<form
+  [formGroup]="newItemForm"
+  (ngSubmit)="addNewItem(newItemForm.value.newItem)"
+>
+  <label @labelIn for="newItem" (click)="toggleInputVisibility()">
+    <svg
+      class="icon"
+      [class.hidden]="addItemInputState"
+      [@moveIcon]="!addItemInputState"
+    >
+      <use xlink:href="assets/symbol-defs.svg#icon-circle-with-plus"></use>
+    </svg>
+    <svg
+      class="icon"
+      [class.hidden]="!addItemInputState"
+      [@moveIcon]="!addItemInputState"
+      (@moveIcon.start)="iconMoving($event)"
+      (@moveIcon.done)="iconMoving($event)"
+    >
+      <use xlink:href="assets/symbol-defs.svg#icon-circle-with-minus"></use>
+    </svg>
+  </label>
+  <input
+    [@expandInput]="addItemInputState"
+    id="newItem"
+    class="input__text"
+    type="text"
+    formControlName="newItem"
+  />
+</form>

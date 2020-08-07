@@ -1,0 +1,84 @@
+:host {
+  display: block;
+}
+
+.input__text {
+  width: 0;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  opacity: 0;
+
+  transition: all .5s linear;
+}
+
+label {
+  display: inline-block;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+
+  z-index: 10;
+}
+
+.input__text:focus {
+  outline: none;
+  border: 1px solid green;
+}
+
+.to-do-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.to-do-list__item {
+  background-color: #ffffff;
+  width: 500px;
+  height: 20px;
+  border: 1px solid #eee;
+  padding: 10px 20px;
+  transition: 0.1s ease-out;
+  cursor: pointer;
+}
+
+.to-do-list__item:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.to-do-list__item:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.to-do-list__item:not(:last-child) {
+  border-bottom: 0;
+}
+
+.to-do-list__item:hover {
+  background-color: #eee;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+form {
+  position: relative;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -2px;
+  left: -3px;
+  z-index: 1;
+
+  transition: 1s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}

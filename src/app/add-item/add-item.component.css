@@ -1,0 +1,45 @@
+.input__text {
+  width: 0;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  opacity: 0;
+
+  transition: all .5s linear;
+}
+
+label {
+  display: inline-block;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+
+  z-index: 10;
+}
+
+.input__text:focus {
+  outline: none;
+  border: 1px solid green;
+}
+
+
+form {
+  position: relative;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -2px;
+  left: -3px;
+  z-index: 1;
+
+  transition: 1s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}

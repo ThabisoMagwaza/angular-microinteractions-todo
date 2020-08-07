@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  padding: 10px 300px;
+}
+
+.route-container {
+  position: relative;
+}
+
+.route-container>* {
+  display: block;
+}
